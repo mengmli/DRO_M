@@ -1,0 +1,67 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=6.028in,
+height=4.754in,
+at={(1.011in,0.642in)},
+scale only axis,
+xmode=log,
+xmin=0.0001,
+xmax=10,
+xminorticks=true,
+ymin=0.1,
+ymax=1,
+axis background/.style={fill=white},
+axis x line*=bottom,
+axis y line*=left
+]
+\addplot [color=red, line width=2.0pt, forget plot]
+  table[row sep=crcr]{%
+0.0001	0.19\\
+0.000359381366380463	0.31\\
+0.00129154966501488	0.6\\
+0.00464158883361278	0.9\\
+0.0166810053720006	1\\
+0.0599484250318941	1\\
+0.215443469003188	1\\
+0.774263682681127	1\\
+2.78255940220713	1\\
+10	1\\
+};
+\addplot [color=blue, line width=2.0pt, forget plot]
+  table[row sep=crcr]{%
+0.0001	1\\
+0.000359381366380463	1\\
+0.00129154966501488	1\\
+0.00464158883361278	1\\
+0.0166810053720006	1\\
+0.0599484250318941	1\\
+0.215443469003188	0.99\\
+0.774263682681127	1\\
+2.78255940220713	0.99\\
+10	0.9\\
+};
+\end{axis}
+
+\begin{axis}[%
+width=7.778in,
+height=5.833in,
+at={(0in,0in)},
+scale only axis,
+xmin=0,
+xmax=1,
+ymin=0,
+ymax=1,
+axis line style={draw=none},
+ticks=none,
+axis x line*=bottom,
+axis y line*=left
+]
+\end{axis}
+\end{tikzpicture}%
