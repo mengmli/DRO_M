@@ -15,16 +15,16 @@ warning('off');
 
 % parameter setting
 
-k=3; % how many customer segements: i.e., how many different markov chain dynamics
+k=2; % how many customer segements: i.e., how many different markov chain dynamics
 d=5; % how many brands
-T=50; % length of each xi^(i)/ sample size
+T=500; % length of each xi^(i)/ sample size
 n_exper = 1; % number of independent experiments
 
-P =  randi([8 25],5,d); %pricing information for each brand and mode of cost
-B = randi([70 100],5,1); % budget in each cost dimension
+P =  randi([8 15],5,d); %pricing information for each brand and mode of cost
+B = randi([50 70],5,1); % budget in each cost dimension
 w=rand(1,k); % weight of each customer segment
 w=w./sum(w);
-a=randi([1 9],d,1); %selling price of each brand
+a=randi([1 90],d,1); %selling price of each brand
 % a=a./sum(a);
 xrange=dec2bin(0:1:2^d-1)-'0'; % decision space
 % xrange=randi([0 5],300,d); % a more general discrete setting
@@ -113,8 +113,8 @@ for i=1:N_r % for each prescribed radius
         for row=1:length(x_feasible(:,1))
             x_cur=x_feasible(row,:)'; %fix one decision
             % apply FW algorithm to get the corresponding prediction
-            iter=100; % maximum iteration for FW alg
-            epsilon=0.1;%min(0.01,10*r); % error tolerance for FW gap
+            iter=1000; % maximum iteration for FW alg
+            epsilon=0.01;%min(0.01,10*r); % error tolerance for FW gap
             cost_fin1 = w*FW_main(k,a,x_cur,epsilon,r,iter,q,alpha0); %return the best minimax prediction given a decision x_cur
             
             if cost_fin1<cost_fin(n) %compare if it is the best decision so far

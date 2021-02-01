@@ -28,17 +28,17 @@ for i=1:N_r % for each prescribed radius
     iid_perf_upper(i)=iid_perf(i)+2*std(cost_out_iid);
 end
 
-save('T_10_simul.mat')
+save('T_500_simul.mat')
 
-figure(1)
-hold on;
-hmeaniid=plot(r_range, reliability_iid, 'LineWidth',2);
-hmeaniid.Color='r';
-hmean_m=plot(r_range, reliability,'LineWidth',2);
-hmean_m.Color='b';
-set(gca,'XScale','log')
+% figure(1)
+% hold on;
+% hmeaniid=plot(r_range, reliability_iid, 'LineWidth',2);
+% hmeaniid.Color='r';
+% hmean_m=plot(r_range, reliability,'LineWidth',2);
+% hmean_m.Color='b';
+% set(gca,'XScale','log')
 
-hold off;
+% hold off;
 
 figure(2)
 hold on;
