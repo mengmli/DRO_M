@@ -17,7 +17,7 @@ warning('off');
 
 k=2; % how many customer segements: i.e., how many different markov chain dynamics
 d=5; % how many brands
-T=500; % length of each xi^(i)/ sample size
+T=300; % length of each xi^(i)/ sample size
 n_exper = 1; % number of independent experiments
 
 P =  randi([8 15],5,d); %pricing information for each brand and mode of cost

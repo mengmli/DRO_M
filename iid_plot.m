@@ -28,7 +28,7 @@ for i=1:N_r % for each prescribed radius
     iid_perf_upper(i)=iid_perf(i)+2*std(cost_out_iid);
 end
 
-save('T_500_simul.mat')
+save('T_300_simul.mat')
 
 % figure(1)
 % hold on;
