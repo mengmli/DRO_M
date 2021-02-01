@@ -1,8 +1,6 @@
-# DRO-Markov
+# DRO_Markov
+accompanying code
 
-This readme file explains how to reproduce the plots presented in our paper "Distributionally Robust Optimization with Markovian Data: Theory and Algorithms".
+## usage
 
-
-## Usage
-
-You can directly run the main.m file in each folder for specific sample size.
+directly run main.m
